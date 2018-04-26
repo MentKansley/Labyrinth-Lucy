@@ -28,7 +28,6 @@ public class playerController : MonoBehaviour {
 
         transform.Translate(strafe, 0, translation);
 
-
         if (Input.GetKeyDown("escape"))
         {
             Cursor.lockState = CursorLockMode.None;
