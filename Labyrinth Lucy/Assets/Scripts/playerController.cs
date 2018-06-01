@@ -23,7 +23,6 @@ public class playerController : MonoBehaviour {
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
         rb = GetComponent<Rigidbody>();
         col = GetComponent<CapsuleCollider>();
 		animator = GetComponent<Animator>();
@@ -50,11 +49,6 @@ public class playerController : MonoBehaviour {
 
 		float animationSpeedPercent = ((running) ? 1 : .5f) * inputDir.magnitude;
 		animator.SetFloat("speedPercent", animationSpeedPercent, speedSmoothTime, Time.deltaTime);
-
-		if (Input.GetKeyDown("escape"))
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
 
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
